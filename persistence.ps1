@@ -1,3 +1,10 @@
+# Author: Michael Wurner  @psyc0de
+# Description: Developed for PRCCDC competition 2021. Multiple persistence methods combined into one script. Often in PRCCDC the Red Team will compromise
+#              the DA credentials early on which is why the first module creates a new user and adds to multiple high prilage groups. Following modules download
+#              a C2 beacon, add to startup folders, create schedule task to copy the file to different directories and execute. The goal of this script was to create
+#              a fast method to add persistence to all hosts in the network. From remote access to 6 types of persistence is about 10 seconds.
+#              Finally the script creates exception folder, disables Windows Defender, and clears event logs.
+
 # Create new domain user and add to domain groups Administrators, Remote Desktop, Domain Admins, Enterprise Admins.
 $Username = "SQL_Admin"
 $Password = 'SQLAdmin@123'
